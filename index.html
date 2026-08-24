@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammad Ziyafat Abbas — AI/ML Engineer</title>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Mohammad Ziyafat Abbas — AI/ML Engineer">
+<meta name="description" content="Portfolio of Mohammad Ziyafat Abbas — AI/ML engineer and data scientist working across NLP, computer vision, and agentic AI systems.">
+<meta name="keywords" content="Mohammad Ziyafat Abbas, AI Engineer, Machine Learning, Data Scientist, LangGraph, Computer Vision, Python, Deep Learning">
+<meta name="author" content="Mohammad Ziyafat Abbas">
+<meta name="theme-color" content="#FAFAF7">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohammad Ziyafat Abbas — AI/ML Engineer">
+<meta property="og:description" content="AI/ML engineer and data scientist working across NLP, computer vision, and agentic AI — from CNN-based medical imaging to human-in-the-loop AI agents.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Mohammad Ziyafat Abbas — AI/ML Engineer">
+<meta property="twitter:description" content="AI/ML engineer and data scientist working across NLP, computer vision, and agentic AI — from CNN-based medical imaging to human-in-the-loop AI agents.">
+
+<!-- Favicon (SVG Data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B1D1C'/><text x='50%' y='62%' font-family='sans-serif' font-weight='bold' font-size='48' fill='%233E6D9C' text-anchor='middle'>ZA</text></svg>">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FAFAF7;
+    --paper-dim:#F2F1EA;
+    --ink:#1B1D1C;
+    --ink-soft:#5B5F5C;
+    --line:#E1DFD6;
+    --accent:#3E6D9C;
+    --accent-soft:#EAF0F6;
+    --sage:#5E7F63;
+    --max:920px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;
+    -ms-overflow-style:none;   /* IE & Edge */
+    scrollbar-width:none;      /* Firefox */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar{
+    display:none;              /* Chrome, Safari, Opera */
+  }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent-soft);color:var(--accent);}
+
+  h1,h2,h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    letter-spacing:-0.02em;
+  }
+
+  .mono{
+    font-family:'JetBrains Mono',monospace;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:rgba(250,250,247,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .progress-bar{
+    position:fixed;
+    top:0;left:0;
+    height:2px;
+    width:0%;
+    background:var(--accent);
+    z-index:20;
+    transition:width .08s linear;
+  }
+  nav .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:60px;
+  }
+  .nav-name{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    transition:letter-spacing .3s ease;
+  }
+  .nav-name:hover{letter-spacing:.02em;}
+  .nav-links{
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .nav-links a{
+    position:relative;
+    transition:color .2s;
+    padding-bottom:3px;
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:0;
+    width:0%;
+    height:1px;
+    background:var(--accent);
+    transition:width .25s ease;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a:hover::after,
+  .nav-links a.active::after{width:100%;}
+  .nav-links a.active{color:var(--accent);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:100px 0 80px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--sage);
+    letter-spacing:.06em;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--sage);
+    display:inline-block;
+  }
+  h1.title{
+    font-size:clamp(34px,5vw,50px);
+    line-height:1.08;
+    margin-bottom:20px;
+  }
+  h1.title span{color:var(--accent);}
+  .lede{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin-bottom:32px;
+  }
+  .hero-links{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:13px;
+  }
+  .pill{
+    font-family:'JetBrains Mono',monospace;
+    border:1px solid var(--line);
+    padding:9px 16px;
+    border-radius:100px;
+    color:var(--ink);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease, background .18s ease;
+    display:inline-block;
+  }
+  .pill:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+    background:var(--accent-soft);
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px -8px rgba(62,109,156,0.45);
+  }
+  .pill:active{
+    transform:translateY(0px) scale(.97);
+    box-shadow:none;
+  }
+  .pill.solid{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+  .pill.solid:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:var(--paper);
+    box-shadow:0 8px 20px -8px rgba(62,109,156,0.55);
+  }
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* stats panel — replaces the old decorative chart */
+  .stats-box{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:28px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    background:var(--paper-dim);
+  }
+  .stat-item{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+  }
+  .stat-num{
+    font-size:28px;
+    font-weight:500;
+    color:var(--accent);
+    min-width:38px;
+  }
+  .stat-label{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.4;
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  section{padding:64px 0;border-top:1px solid var(--line);}
+  .sec-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:40px;
+  }
+  .sec-head h2{font-size:22px;}
+  .sec-num{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp-item{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:24px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    transition:padding-left .3s ease, border-color .3s ease;
+  }
+  .exp-item:last-child{border-bottom:none;}
+  .exp-item:hover{
+    padding-left:8px;
+    border-color:var(--accent);
+  }
+  .exp-date{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding-top:3px;
+    transition:color .3s ease;
+  }
+  .exp-item:hover .exp-date{color:var(--accent);}
+  .exp-role{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    margin-bottom:2px;
+  }
+  .exp-org{
+    color:var(--accent);
+    font-size:13px;
+    margin-bottom:12px;
+  }
+  .exp-item ul{
+    padding-left:18px;
+    color:var(--ink-soft);
+    font-size:14.5px;
+  }
+  .exp-item li{margin-bottom:6px;}
+  .exp-item li::marker{color:var(--sage);}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .project{
+    background:var(--paper);
+    padding:32px 32px 32px 30px;
+    border-left:2px solid transparent;
+    transition:background .25s, border-color .25s, transform .25s, box-shadow .25s;
+    position:relative;
+  }
+  .project:hover{
+    background:var(--paper-dim);
+    border-left-color:var(--accent);
+    transform:translateX(3px);
+  }
+  .project-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+  }
+  .project h3{font-size:19px;transition:color .25s;}
+  .project:hover h3{color:var(--accent);}
+  .project-badge{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--sage);
+    border:1px solid var(--sage);
+    padding:3px 10px;
+    border-radius:100px;
+    white-space:nowrap;
+    transition:background .25s, color .25s;
+  }
+  .project:hover .project-badge{
+    background:var(--sage);
+    color:var(--paper);
+  }
+  .project p.stat-line{
+    font-size:12px;
+    color:var(--sage);
+    margin-bottom:10px;
+    letter-spacing:.02em;
+  }
+  .project p.desc{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    max-width:68ch;
+    margin-bottom:14px;
+  }
+  .tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+  }
+  .tags span{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:3px 9px;
+    border-radius:5px;
+    transition:transform .18s ease, background .18s ease;
+    display:inline-block;
+  }
+  .project-links{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+    flex-wrap:wrap;
+  }
+
+  .project-links a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    padding:7px 14px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    color:var(--ink-soft);
+    transition:all .2s ease;
+  }
+
+  .project-links a:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+    background:var(--accent-soft);
+    transform:translateY(-2px);
+  }
+
+  .project:hover .tags span:hover{
+    transform:translateY(-2px);
+    background:var(--accent);
+    color:var(--paper);
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px 40px;
+  }
+  .skill-row{
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+    position:relative;
+  }
+  .skill-row::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:-1px;
+    width:0%;
+    height:1px;
+    background:var(--accent);
+    transition:width .35s ease;
+  }
+  .skill-row:hover::after{width:100%;}
+  .skill-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    color:var(--sage);
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    margin-bottom:8px;
+  }
+  .skill-vals{font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- EDU / CERTS ---------- */
+  .edu-cert{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .edu-cert h3{font-size:16px;margin-bottom:4px;}
+  .edu-cert .org{color:var(--accent);font-size:13.5px;margin-bottom:14px;}
+  .edu-cert ul{list-style:none;font-size:14px;color:var(--ink-soft);}
+  .edu-cert li{
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    gap:10px;
+    transition:padding-left .25s ease, color .25s ease;
+  }
+  .edu-cert li:hover{
+    padding-left:6px;
+    color:var(--ink);
+  }
+  .edu-cert li:before{content:'—';color:var(--sage);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:56px 0 40px;
+    text-align:center;
+  }
+  footer h2{
+    font-size:clamp(26px,4vw,36px);
+    margin-bottom:16px;
+  }
+  footer .lede{margin:0 auto 28px;}
+  footer .hero-links{justify-content:center;}
+  .fine{
+    margin-top:50px;
+    font-size:12px;
+    color:var(--ink-soft);
+    font-family:'JetBrains Mono',monospace;
+  }
+
+  @media(max-width:720px){
+    .hero-grid{grid-template-columns:1fr;}
+    .stats-box{order:-1;}
+    .exp-item{grid-template-columns:1fr;gap:6px;}
+    .skills-grid{grid-template-columns:1fr;}
+    .edu-cert{grid-template-columns:1fr;gap:28px;}
+    .nav-links{gap:16px;font-size:12px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{transition:none;opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name">M. Ziyafat Abbas</div>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">open to opportunities</div>
+      <h1 class="title">Mohammad Ziyafat Abbas<br>builds models that <span>ship</span>.</h1>
+      <p class="lede">AI/ML engineer and data scientist working across NLP, computer vision, and agentic AI — from CNN-based medical imaging to human-in-the-loop AI agents with real-time approval workflows. Two internships, full CI/CD test coverage, and a habit of taking things to deployment.</p>
+      <div class="hero-links">
+        <a class="pill solid" href="mailto:ziyafat444@gmail.com">Email me</a>
+        <a class="pill" href="https://github.com/MohammadZiyafatAbbas" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/mohammad-ziyafat-abbas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="stats-box">
+      <div class="stat-item">
+        <div class="stat-num mono">38</div>
+        <div class="stat-label">tests, CI-enforced on every push</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num mono">4</div>
+        <div class="stat-label">deployed / documented projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num mono">2</div>
+        <div class="stat-label">internships, full-stack to CNNs</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Experience</h2>
+      <span class="sec-num mono">02 roles</span>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">Oct 2025 – Feb 2026</div>
+      <div>
+        <div class="exp-role">Data Science Intern</div>
+        <div class="exp-org">Shamgar Software Solutions · Nagpur, India</div>
+        <ul>
+          <li>Built ProstheticIQ, a full-stack EMG analytics dashboard (React, Node.js, Docker) analyzing 120 simulated sessions across 8 users, visualizing accuracy-versus-comfort tradeoffs via scatter, trend, and radar charts.</li>
+          <li>Built a supervised ML crop-recommendation system from soil-composition data to support data-driven agricultural decisions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">Dec 2024 – Feb 2025</div>
+      <div>
+        <div class="exp-role">AI Intern</div>
+        <div class="exp-org">AICTE TechSaksham Program · Remote</div>
+        <ul>
+          <li>Built an SMS spam-detection classifier using TF-IDF with Naive Bayes and Logistic Regression, and automated the full training pipeline for reproducibility.</li>
+          <li>Awarded a Certificate of Appreciation for outstanding performance across the program.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Projects</h2>
+      <span class="sec-num mono">04 selected</span>
+    </div>
+
+    <div class="projects">
+      <div class="project reveal">
+        <div class="project-top">
+          <h3>Refund Support Agent — Human-in-the-Loop Agentic AI System</h3>
+          <span class="project-badge">deployed</span>
+        </div>
+        <p class="stat-line mono">38 automated tests · CI/CD · human-approval gating</p>
+        <p class="desc">A multi-tool orchestrator agent using LangGraph's interrupt/resume state machine, dynamically routing refund requests through automated low-risk tools and human-approval gates for high-risk actions. Backed by a plan-validation layer guarding against malformed LLM output and a persistent audit trail.</p>
+        <div class="tags">
+            <span>Python</span>
+            <span>LangGraph</span>
+            <span>Gemini API</span>
+            <span>Streamlit</span>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/MohammadZiyafatAbbas/refund-support-agent" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            <a href="https://refund-support-agent.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+            <a href="https://github.com/MohammadZiyafatAbbas/refund-support-agent#readme" target="_blank" rel="noopener noreferrer">Write-up →</a>
+        </div>
+      </div>
+
+      <div class="project reveal">
+        <div class="project-top">
+          <h3>ProstheticIQ — EMG Analytics Dashboard</h3>
+          <span class="project-badge">full-stack</span>
+        </div>
+        <p class="stat-line mono">120 sessions · 8 users · Dockerized</p>
+        <p class="desc">A full-stack analytics dashboard for simulated EMG sensor data and prosthetic usage patterns — scatter plots, multi-line trend charts, and per-session radar views surfacing how device accuracy and calibration drift affect user comfort.</p>
+        <div class="tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>Docker</span>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/MohammadZiyafatAbbas/Prosthetic-Performance-Analysis" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project reveal">
+        <div class="project-top">
+          <h3>Face Liveness Detection System</h3>
+          <span class="project-badge">computer vision</span>
+        </div>
+        <p class="desc">A CNN-based anti-spoofing system that distinguishes real faces from photo and video replay attacks, with real-time webcam detection.</p>
+        <div class="tags">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>OpenCV</span>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/MohammadZiyafatAbbas/Face-Liveness-Detection" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project reveal">
+        <div class="project-top">
+          <h3>Fake News Detection</h3>
+          <span class="project-badge">NLP</span>
+        </div>
+        <p class="stat-line mono">12,836 statements · mid-70s F1</p>
+        <p class="desc">TF-IDF with Logistic Regression and Random Forest on the LIAR benchmark, six classes reduced to binary labels.</p>
+        <div class="tags">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>NLTK</span>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/MohammadZiyafatAbbas/Fake-News-Detection" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Skills</h2>
+      <span class="sec-num mono">tools &amp; stack</span>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-row">
+        <div class="skill-label">Languages</div>
+        <div class="skill-vals">Python, SQL, JavaScript, HTML, CSS</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">ML &amp; Deep Learning</div>
+        <div class="skill-vals">Supervised Learning, Classification, CNN, Neural Networks, Q-Learning, Feature Engineering, Hyperparameter Tuning, Model Evaluation</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Agentic AI</div>
+        <div class="skill-vals">LangGraph, Multi-Tool Orchestration, Human-in-the-Loop Approval Systems, LLM Tool Use, Prompt Engineering</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Frameworks &amp; Libraries</div>
+        <div class="skill-vals">TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, NLTK, OpenCV, Streamlit</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Deployment &amp; Tools</div>
+        <div class="skill-vals">Flask, REST APIs, Docker, Git, GitHub, GitHub Actions (CI/CD), pytest, React, Node.js, EDA, Data Visualization</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Education &amp; Recognition</h2>
+      <span class="sec-num mono">2022 – 2026</span>
+    </div>
+    <div class="edu-cert reveal">
+      <div>
+        <h3>B.Tech, Computer Science Engineering</h3>
+        <div class="org">GH Raisoni College of Engineering and Management, Nagpur · CGPA 7.8/10</div>
+      </div>
+      <div>
+        <ul>
+          <li>Certificate of Appreciation — AICTE TechSaksham Program</li>
+          <li>Inter-College Hackathon Participant — GH Raisoni CEM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something.</h2>
+    <p class="lede">Open to AI/ML engineering and data science roles — happy to talk models, deployment, or just trade notes on training curves.</p>
+    <div class="hero-links">
+      <a class="pill solid" href="mailto:ziyafat444@gmail.com">ziyafat444@gmail.com</a>
+      <a class="pill" href="tel:+918806727597">+91 88067 27597</a>
+      <a class="pill" href="https://github.com/MohammadZiyafatAbbas" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="pill" href="https://www.linkedin.com/in/mohammad-ziyafat-abbas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="fine">Nagpur, India — built with care.</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll progress bar
+  const progressBar = document.getElementById('progressBar');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  }
+  document.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  function updateActiveLink(){
+    let current = '';
+    sections.forEach(sec=>{
+      const rect = sec.getBoundingClientRect();
+      if(rect.top <= 120 && rect.bottom >= 120) current = sec.id;
+    });
+    navLinks.forEach(link=>{
+      link.classList.toggle('active', link.getAttribute('href') === '#'+current);
+    });
+  }
+  document.addEventListener('scroll', updateActiveLink, {passive:true});
+  updateActiveLink();
+
+  // Scroll reveal with slight stagger per group
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((entry, i)=>{
+      if(entry.isIntersecting){
+        setTimeout(()=> entry.target.classList.add('in-view'), i * 60);
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
